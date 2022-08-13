@@ -13,8 +13,6 @@ streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
 streamlit.text('🐔 Hard-Boiled Free-Range Egg')
 streamlit.text('🥑🍞 Avocado Toast')
 
-# don't run anything until we troubleshoot:
-streamlit.stop()
 
 # Custom smoothie
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
@@ -80,5 +78,9 @@ def insert_row_snowflake(new_fruit):
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 if streamlit.button('Add a Fruit to the List'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    
+
+# don't run anything until we troubleshoot:
+#streamlit.stop()
     back_from_function = insert_row_snowflake(add_my_fruit)
     streamlit.text(back_from_function)
