@@ -33,7 +33,6 @@ def get_fruity_vice_data(this_fruit_choice):
   return fruityvice_normalized
 
 
-
 # New section to display fruityvice api response
 streamlit.header("Fruityvice Fruit Advice!")
 
@@ -59,7 +58,7 @@ streamlit.header("The fruit load list contains:")
 
 #Snowflake related functions:
 def get_fruit_load_list():
-  with my_cnx.cursor() as my_cur
+  with my_cnx.cursor() as my_cur:
   my_cur.execute("select * from fruit_load_list")
   
 #Add a button to load the list:
