@@ -31,6 +31,8 @@ def get_fruity_vice_data(this_fruit_choice):
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
 
+# don't run anything until we troubleshoot:
+streamlit.stop()
 
 # New section to display fruityvice api response
 streamlit.header("Fruityvice Fruit Advice!")
@@ -50,8 +52,7 @@ except URLError as e:
       
 streamlit.write('The user entered ', fruit_choice)
 
-# don't run anything until we troubleshoot:
-streamlit.stop()
+
 
 streamlit.header("The fruit load list contains:")
 
